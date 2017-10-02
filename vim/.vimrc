@@ -5,6 +5,7 @@ call plug#begin()
 	Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-surround'
 	Plug 'wombat256.vim'
   Plug 'altercation/vim-colors-solarized'
 	Plug 'ctrlpvim/ctrlp.vim'
