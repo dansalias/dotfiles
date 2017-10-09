@@ -25,6 +25,9 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
 call plug#end()
 
+" automatically update unedited buffers when file is changed
+set autoread
+
 " color scheme
 set term=screen-256color
 syntax on
