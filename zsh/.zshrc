@@ -29,3 +29,4 @@ compinit
   alias -g tconf=~/.tmux.conf
   alias -g zconf=~/.zshrc
   alias -g vconf=~/.vimrc
+  alias -g gconf=~/.gitconfig
