@@ -22,6 +22,9 @@ compinit
   alias t="tmux"
   alias e="exit"
 
+  # tree
+  alias tree="tree -a -I 'node_modules|.git'"
+
   # git
   alias g="git"
 
