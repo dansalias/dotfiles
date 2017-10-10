@@ -12,14 +12,20 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Custom lines
-alias c="clear"
-alias p="pwd"
-alias v="vim"
-alias t="tmux"
-alias e="exit"
 
-alias -g tconf=~/.tmux.conf
-alias -g zconf=~/.zshrc
-alias -g vconf=~/.vimrc
-# End custom lines
+# Aliases
+
+  # general
+  alias c="clear"
+  alias p="pwd"
+  alias v="vim"
+  alias t="tmux"
+  alias e="exit"
+
+  # git
+  alias g="git"
+
+  # config files
+  alias -g tconf=~/.tmux.conf
+  alias -g zconf=~/.zshrc
+  alias -g vconf=~/.vimrc
