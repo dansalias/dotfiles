@@ -28,6 +28,10 @@ call plug#end()
 " automatically update unedited buffers when file is changed
 set autoread
 
+" case insensitve search
+set ignorecase
+set smartcase
+
 " color scheme
 set term=screen-256color
 syntax on
