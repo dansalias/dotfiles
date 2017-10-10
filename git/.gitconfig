@@ -1,0 +1,17 @@
+[credential]
+	helper = cache --timeout=3600
+[user]
+	name = deeayen
+	email = danyoungnz@gmail.com
+[remote "origin"]
+	receivepack = git-receive-pack
+[push]
+	default = simple
+[core]
+	editor = vim
+[alias]
+  s = status
+  a = add
+  c = commit
+  p = push
+  d = diff
