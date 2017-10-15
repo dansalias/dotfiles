@@ -2,16 +2,17 @@
 call plug#begin()
   Plug 'scrooloose/nerdtree'
   Plug 'itchyny/lightline.vim'
-  Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'wombat256.vim'
   Plug 'altercation/vim-colors-solarized'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'Quramy/tsuquyomi'
-  Plug 'Shougo/vimproc.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'junegunn/fzf'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'Quramy/tsuquyomi'
+" Plug 'Shougo/vimproc.vim'
   Plug 'easymotion/vim-easymotion'
 "	Plug 'ervandew/supertab'
   Plug 'valloric/youcompleteme'
@@ -23,6 +24,7 @@ call plug#begin()
   Plug 'docunext/closetag.vim'
 "  Plug 'othree/xml.vim'
   Plug 'mattn/emmet-vim'
+  Plug 'w0rp/ale'
 call plug#end()
 
 " automatically update unedited buffers when file is changed
