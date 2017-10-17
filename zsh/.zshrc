@@ -21,6 +21,7 @@ compinit
   alias v="vim"
   alias t="tmux"
   alias e="exit"
+  alias l="ls -A --color --group-directories-first"
 
   # tree
   alias tree="tree -a -I 'node_modules|.git'"
