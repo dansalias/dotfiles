@@ -1,3 +1,12 @@
+" nocompatible mode
+set nocompatible
+
+" detect filetype
+filetype plugin on
+
+" use in-built matchit plugin
+runtime macros/matchit.vim
+
 " plugins
 call plug#begin()
   Plug 'scrooloose/nerdtree'
