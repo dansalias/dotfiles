@@ -23,15 +23,15 @@ call plug#begin()
 " Plug 'Quramy/tsuquyomi'
 " Plug 'Shougo/vimproc.vim'
   Plug 'easymotion/vim-easymotion'
-"	Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
   Plug 'valloric/youcompleteme'
-"	Plug 'sirver/ultisnips'
-"	Plug 'honza/vim-snippets'
-"	Plug 'raimondi/delimitmate'
+" Plug 'sirver/ultisnips'
+" Plug 'honza/vim-snippets'
+" Plug 'raimondi/delimitmate'
   Plug 'posva/vim-vue'
-"  Plug 'alvan/vim-closetag'
+" Plug 'alvan/vim-closetag'
   Plug 'docunext/closetag.vim'
-"  Plug 'othree/xml.vim'
+" Plug 'othree/xml.vim'
   Plug 'mattn/emmet-vim'
   Plug 'w0rp/ale'
   Plug 'jiangmiao/auto-pairs'
@@ -55,8 +55,8 @@ colorscheme solarized
 " status bar
 set laststatus=2
 " let g:lightline = {
-"	\ 'colorscheme': 'wombat',
-"	\ }
+"   \ 'colorscheme': 'wombat',
+"   \ }
 
 " show numbers by default
 set number
