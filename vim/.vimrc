@@ -34,6 +34,7 @@ call plug#begin()
 "  Plug 'othree/xml.vim'
   Plug 'mattn/emmet-vim'
   Plug 'w0rp/ale'
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " automatically update unedited buffers when file is changed
