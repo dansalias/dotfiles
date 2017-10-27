@@ -1,7 +1,7 @@
 [credential]
   helper = cache --timeout=3600
 [user]
-  name = deeayen
+  name = d4n13ly
   email = kiwidan92@gmail.com
 [remote "origin"]
   receivepack = git-receive-pack
