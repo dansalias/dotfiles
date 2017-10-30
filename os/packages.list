@@ -75,6 +75,9 @@ e2fsprogs					install
 eject						install
 emacsen-common					install
 enchant						install
+eog						install
+evince						install
+evince-common					install
 evolution-data-server				install
 evolution-data-server-common			install
 exfat-fuse					install
@@ -137,6 +140,7 @@ gir1.2-networkmanager-1.0:amd64			install
 gir1.2-nmgtk-1.0:amd64				install
 gir1.2-notify-0.7:amd64				install
 gir1.2-pango-1.0:amd64				install
+gir1.2-peas-1.0:amd64				install
 gir1.2-polkit-1.0				install
 gir1.2-soup-2.4:amd64				install
 gir1.2-telepathyglib-0.12			install
@@ -702,6 +706,8 @@ libpcre16-3:amd64				install
 libpcre2-8-0:amd64				install
 libpcre3:amd64					install
 libpcsclite1:amd64				install
+libpeas-1.0-0:amd64				install
+libpeas-common					install
 libperl5.24:amd64				install
 libpgm-5.2-0:amd64				install
 libphonenumber7:amd64				install
@@ -731,6 +737,7 @@ libpython2.7:amd64				install
 libpython2.7-minimal:amd64			install
 libpython2.7-stdlib:amd64			install
 libpython3-stdlib:amd64				install
+libpython3.5:amd64				install
 libpython3.5-minimal:amd64			install
 libpython3.5-stdlib:amd64			install
 libqmi-glib5:amd64				install
