@@ -9,6 +9,8 @@ apt						install
 apt-listchanges					install
 apt-utils					install
 arc-theme					install
+aspell						install
+aspell-en					install
 at-spi2-core					install
 avahi-daemon					install
 base-files					install
@@ -51,6 +53,7 @@ debconf-i18n					install
 debian-archive-keyring				install
 debian-faq					install
 debianutils					install
+desktop-base					install
 desktop-file-utils				install
 dh-python					install
 dictionaries-common				install
@@ -66,10 +69,12 @@ dnsmasq-base					install
 doc-debian					install
 dosfstools					install
 dpkg						install
+dselect						install
 e2fslibs:amd64					install
 e2fsprogs					install
 eject						install
 emacsen-common					install
+enchant						install
 evolution-data-server				install
 evolution-data-server-common			install
 exfat-fuse					install
@@ -202,11 +207,13 @@ gzip						install
 hdparm						install
 hicolor-icon-theme				install
 hostname					install
+hunspell-en-us					install
 i965-va-driver:amd64				install
 iamerican					install
 ibritish					install
 ienglish-common					install
 ifupdown					install
+iio-sensor-proxy				install
 init						install
 init-system-helpers				install
 initramfs-tools					install
@@ -221,6 +228,7 @@ isc-dhcp-common					install
 iso-codes					install
 ispell						install
 iw						install
+jq						install
 kbd						install
 keyboard-configuration				install
 klibc-utils					install
@@ -296,6 +304,7 @@ libcairo-gobject2:amd64				install
 libcairo2:amd64					install
 libcamel-1.2-59:amd64				install
 libcanberra-gtk3-0:amd64			install
+libcanberra-gtk3-module:amd64			install
 libcanberra-pulse:amd64				install
 libcanberra0:amd64				install
 libcap-ng0:amd64				install
@@ -485,6 +494,7 @@ libgstreamer-plugins-bad1.0-0:amd64		install
 libgstreamer-plugins-base1.0-0:amd64		install
 libgstreamer1.0-0:amd64				install
 libgtk-3-0:amd64				install
+libgtk-3-bin					install
 libgtk-3-common					install
 libgtk2.0-0:amd64				install
 libgtk2.0-bin					install
@@ -551,6 +561,7 @@ libjbig0:amd64					install
 libjbig2dec0:amd64				install
 libjim0.76:amd64				install
 libjpeg62-turbo:amd64				install
+libjq1:amd64					install
 libjson-glib-1.0-0:amd64			install
 libjson-glib-1.0-common				install
 libk5crypto3:amd64				install
@@ -649,6 +660,7 @@ libnuma1:amd64					install
 liboauth0:amd64					install
 libofa0:amd64					install
 libogg0:amd64					install
+libonig4:amd64					install
 libopenal-data					install
 libopenal1:amd64				install
 libopencore-amrnb0:amd64			install
@@ -669,6 +681,8 @@ libopus0:amd64					install
 liborc-0.4-0:amd64				install
 libosinfo-1.0-0:amd64				install
 libp11-kit0:amd64				install
+libpam-cap:amd64				install
+libpam-gnome-keyring:amd64			install
 libpam-modules:amd64				install
 libpam-modules-bin				install
 libpam-runtime					install
@@ -905,6 +919,7 @@ libxcb-shape0:amd64				install
 libxcb-shm0:amd64				install
 libxcb-sync1:amd64				install
 libxcb-util0:amd64				install
+libxcb-xf86dri0:amd64				install
 libxcb-xfixes0:amd64				install
 libxcb-xinerama0:amd64				install
 libxcb-xkb1:amd64				install
@@ -1077,21 +1092,21 @@ tar						install
 task-english					install
 tasksel						install
 tasksel-data					install
+tcpd						install
 telnet						install
 tmux						install
 traceroute					install
 tracker						install
-tracker-extract					install
-tracker-gui					install
-tracker-miner-fs				install
 tzdata						install
 ucf						install
 udev						install
 udisks2						install
+unzip						install
 update-inetd					install
 upower						install
 usb-modeswitch					install
 usb-modeswitch-data				install
+usbmuxd						install
 usbutils					install
 util-linux					install
 util-linux-locales				install
@@ -1140,6 +1155,7 @@ xml-core					install
 xorg						install
 xorg-docs-core					install
 xserver-common					install
+xserver-xephyr					install
 xserver-xorg					install
 xserver-xorg-core				install
 xserver-xorg-input-all				install
