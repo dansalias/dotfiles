@@ -1090,6 +1090,7 @@ sed						install
 sensible-utils					install
 sgml-base					install
 shared-mime-info				install
+sudo						install
 system-config-printer-common			install
 system-config-printer-udev			install
 systemd						install
