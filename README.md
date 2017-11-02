@@ -1,20 +1,32 @@
 # dotfiles
 My dotfiles and scripts for bootstrapping a clean Debian installation.
 
-## Disclaimer
-This repo serves as a public store for my configuration and installation files. It is designed to allow me to setup a fresh installation of Debian, with all of the essential software I use for web development, using a single command.
-Feel free to fork the repo and/or use it as inspiration for your own dotfiles. Don't use the repo without first reviewing the code, as it is a reflection of my own personal needs and tastes.
+## NOTE!
+Do not blindly use the bootstrap script to configure an existing installation, this will have serious consequences (such as *wiping your home directory*).
+The bootstrap script is designed to setup a fresh minimal Debian installation (no GUI) with Gnome, the Arc Theme, Numix Icons, and a small number of packages that I use for web development.
+Feel free to fork the repo and/or use it as inspiration for your own dotfiles.
 
-## Installation
+## Debian Installation
+Install Debian using the Expert Installer (Advanced Options -> Expert Install).
+Load only the choose-mirror installer component.
+Create a root account.
+Install targeted driver's only.
+Allow non-free software.
+Enable source repositories in APT.
+Enable security updates, release updates, and backported software.
+Don't install a desktop environment (the bootstrap script handles this); only select the "standard system utilities".
 
+## Install git and sudo
+As root:
 ```bash
-wget -q0 https://raw.githubusercontent.com/deeayen/dotfiles/master/bootstrap.sh | bash -s
+apt-get update && apt-get install sudo git
+adduser <your-username> sudo
+exit
 ```
 
-Or if you prefer not to source an externally hosted shell script:
-
+## Clone repo and run bootstrap script
+As user:
 ```bash
-sudo apt-get update && apt-get install git
-git clone https://github.com/deeayen/dotfiles.git ~/projects/dotfiles
-cd ~/projects/dotfiles && ./bootstrap.sh
+git clone https://github.com/d4n13ly/dotfiles ~/projects/dotfiles
+sudo -E ~/projects/dotfiles/bootstrap.sh
 ```
