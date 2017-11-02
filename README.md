@@ -7,14 +7,14 @@ The bootstrap script is designed to setup a fresh minimal Debian installation (n
 Feel free to fork the repo and/or use it as inspiration for your own dotfiles.
 
 ## Debian Installation
-Install Debian using the Expert Installer (Advanced Options -> Expert Install).
-Load only the choose-mirror installer component.
-Create a root account.
-Install targeted driver's only.
-Allow non-free software.
-Enable source repositories in APT.
-Enable security updates, release updates, and backported software.
-Don't install a desktop environment (the bootstrap script handles this); only select the "standard system utilities".
+- Install Debian using the Expert Installer (Advanced Options -> Expert Install).
+- Load only the choose-mirror installer component.
+- Create a root account.
+- Install targeted driver's only.
+- Allow non-free software.
+- Enable source repositories in APT.
+- Enable security updates, release updates, and backported software.
+- Don't install a desktop environment (the bootstrap script handles this); only select the "standard system utilities".
 
 ## Install git and sudo
 As root:
