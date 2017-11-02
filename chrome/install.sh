@@ -1,6 +1,9 @@
-#!/bin/bash
+#!/bin/bash -x
+CHROME_PACKAGE_NAME=google-chrome-stable_current_amd64.deb
+CHROME_URL=https://dl.google.com/linux/direct/$CHROME_PACKAGE_NAME
+CHROME_PREFERENCES_LOC=$HOME/.config/google-chrome/Default/Preferences
 
 # Download and install google chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P ~/downloads
-dpkg -i google-chrome*.deb
+wget $CHROME_URL -P $HOME/downloads
+dpkg -i $HOME/downloads/$CHROME_PACKAGE_NAME
 apt-get install -f
