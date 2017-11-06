@@ -6,8 +6,6 @@ DF=$HOME/projects/dotfiles
 source $DF/os/install_packages.sh
 
 # Create home directory structure
-shopt -s extglob
-rm -r $HOME/!(projects)
 mkdir -p $HOME/{downloads,desktop,media/{images,music,videos,documents}}
 
 # Configure Gnome
