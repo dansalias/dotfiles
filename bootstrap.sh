@@ -1,20 +1,17 @@
-#!/bin/bash
+#!/bin/bash -x
 
-# Tell Debian not to expect any input
-export DEBIAN_FRONTEND = noninteractive > /dev/null
+DF=$HOME/projects/dotfiles
 
-# Update package lists
-apt-get -qq update
+# Install packages
+source $DF/os/install_packages.sh
 
-# Install git and clone repository
-apt-get install -y --no-install-recommends git
-git clone https://github.com/kiwidan92/dotfiles.git ~/projects/dotfiles
+# Create home directory structure
+shopt -s extglob
+rm -r $HOME/!(projects)
+mkdir -p $HOME/{downloads,desktop,media/{images,music,videos,documents}}
 
-# Execute all shell scripts in dotfiles directory
-for SCRIPT in ~/projects/dotfiles/**/*
-do
-		if [ -f $SCRIPT -a -x $SCRIPT]
-		then
-				$SCRIPT
-		fi
-done
+# Configure Gnome
+source $DF/gnome/configure.sh
+
+# Install Google Chrome
+source $DS/chrome/install.sh
