@@ -15,3 +15,9 @@ wget $USER_THEME_URL -P $HOME/downloads
 unzip $USER_THEME_LOC -d $EXTENSIONS_DIR/user-theme
 cp $USER_THEME_SCHEMA_LOC $SCHEMA_DEST
 glib-compile-schemas $SCHEMA_DEST
+
+gsettings set org.gnome.shell enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com']"
+gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
+gsettings set org.gnome.desktop.interface icon-theme "Numix-Circle"
+gsettings set org.gnome.shell.extensions.user-theme name "Arc-Dark"
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'gnome-music.desktop', 'org.gnome.Terminal.desktop']"
