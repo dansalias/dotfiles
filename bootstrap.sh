@@ -14,4 +14,4 @@ mkdir -p $HOME/{downloads,desktop,media/{images,music,videos,documents}}
 source $DF/gnome/configure.sh
 
 # Install Google Chrome
-source $DS/chrome/install.sh
+source $DF/chrome/install.sh
