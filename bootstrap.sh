@@ -11,7 +11,7 @@ rm -r $HOME/!(projects)
 mkdir -p $HOME/{downloads,desktop,media/{images,music,videos,documents}}
 
 # Configure Gnome
-source $DF/os/gnome/configure.sh
+source $DF/gnome/configure.sh
 
 # Install Google Chrome
 source $DS/chrome/install.sh
