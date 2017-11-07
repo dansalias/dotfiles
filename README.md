@@ -10,7 +10,7 @@ Feel free to fork the repo and/or use it as inspiration for your own dotfiles.
 - Install Debian using the Expert Installer (Advanced Options -> Expert Install).
 - Load only the choose-mirror installer component.
 - Create a root account.
-- Install targeted driver's only.
+- Install targeted drivers only.
 - Allow non-free software.
 - Enable source repositories in APT.
 - Enable security updates, release updates, and backported software.
@@ -24,9 +24,16 @@ adduser <your-username> sudo
 exit
 ```
 
-## Clone repo and run bootstrap script
+## Clone repo, install packages, and reboot
 As user:
 ```bash
 git clone https://github.com/d4n13ly/dotfiles ~/projects/dotfiles
-sudo -E ~/projects/dotfiles/bootstrap.sh
+sudo -E ~/projects/dotfiles/os/install_packages.sh
+sudo shutdown -r now
+```
+
+## Configure user environment
+After reboot, in terminal:
+```bash
+sudo -E ~/project/dotfiles/scripts/user_config.sh
 ```
