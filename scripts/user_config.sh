@@ -1,15 +1,20 @@
 #!/bin/bash -x
-
 DF=$HOME/projects/dotfiles
-
-# Install packages
-source $DF/os/install_packages.sh
+SCRIPTS=$DF/scripts
 
 # Create home directory structure
+shopt -s extglob
+rm -r $HOME/!(projects)
 mkdir -p $HOME/{downloads,desktop,media/{images,music,videos,documents}}
 
-# Configure Gnome
-source $DF/gnome/configure.sh
-
 # Install Google Chrome
-source $DF/chrome/install.sh
+source $SCRIPTS/install_chrome.sh
+
+# Install user-theme extension
+source $SCRIPTS/install_user_theme_extension.sh
+
+# Install Numix icons
+source $SCRIPTS/install_numix_icons.sh
+
+# Configure Gnome
+source $SCRIPTS/configure_gnome.sh
