@@ -35,5 +35,5 @@ sudo shutdown -r now
 ## Configure user environment
 After reboot, in terminal:
 ```bash
-sudo -E ~/project/dotfiles/scripts/user_config.sh
+~/project/dotfiles/scripts/user_config.sh
 ```
