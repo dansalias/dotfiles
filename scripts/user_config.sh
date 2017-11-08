@@ -18,3 +18,6 @@ source $SCRIPTS/install_numix_icons.sh
 
 # Configure Gnome
 source $SCRIPTS/configure_gnome.sh
+
+# Create symlinks
+source $SCRIPTS/create_symlinks.sh
