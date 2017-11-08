@@ -21,3 +21,6 @@ source $SCRIPTS/configure_gnome.sh
 
 # Create symlinks
 source $SCRIPTS/create_symlinks.sh
+
+# Install vim plugin manager
+source $SCRIPTS/install_vim_plug.sh
