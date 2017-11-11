@@ -34,3 +34,9 @@ compinit
   alias -g zconf=~/.zshrc
   alias -g vconf=~/.vimrc
   alias -g gconf=~/.gitconfig
+
+# Utility
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}
