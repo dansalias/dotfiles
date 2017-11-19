@@ -12,6 +12,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Environment variables
+export VISUAL="vim"
 
 # Aliases
 
