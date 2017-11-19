@@ -1,114 +1,49 @@
-" nocompatible mode
+" general
 set nocompatible
-
-" detect filetype
-filetype plugin on
-
-" use in-built matchit plugin
-runtime macros/matchit.vim
-
-" plugins
-call plug#begin()
-  Plug 'scrooloose/nerdtree'
-  Plug 'itchyny/lightline.vim'
-" Plug 'scrooloose/syntastic'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-surround'
-  Plug 'wombat256.vim'
-  Plug 'altercation/vim-colors-solarized'
-" Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'junegunn/fzf'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'Quramy/tsuquyomi'
-" Plug 'Shougo/vimproc.vim'
-  Plug 'easymotion/vim-easymotion'
-" Plug 'ervandew/supertab'
-  Plug 'valloric/youcompleteme'
-" Plug 'sirver/ultisnips'
-" Plug 'honza/vim-snippets'
-" Plug 'raimondi/delimitmate'
-  Plug 'posva/vim-vue'
-" Plug 'alvan/vim-closetag'
-  Plug 'docunext/closetag.vim'
-" Plug 'othree/xml.vim'
-  Plug 'mattn/emmet-vim'
-  Plug 'w0rp/ale'
-  Plug 'jiangmiao/auto-pairs'
-call plug#end()
-
-" automatically update unedited buffers when file is changed
 set autoread
-
-" case insensitve search
+set hidden
 set ignorecase
 set smartcase
 
-" color scheme
-set term=screen-256color
-syntax on
-let g:solarized_termcolors=256
-set t_Co=256
-set background=dark
-colorscheme solarized
-
-" status bar
-set laststatus=2
-" let g:lightline = {
-"   \ 'colorscheme': 'wombat',
-"   \ }
-
-" show numbers by default
+" interface
 set number
-
-" don't wrap lines
+set relativenumber
 set nowrap
 
-" switch unwritten buffers without !
-set hidden
+" syntax
+set t_Co=16
+syntax on
+colorscheme city-lights
 
-" NERDTree settings (always open, switch focus, set size, close if last)
-" autocmd vimenter * NERDTree
-" autocmd vimenter * wincmd p
-let NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 40
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" set default tab width to two spaces
+" indentation
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-" use <kj> to switch to normal mode
-ino kj <esc>
-vno kj <esc>
+" vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+  " utility
+  Plugin 'gerw/vim-hilinktrace'
 
-" UltiSnips config 
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
+  " syntax
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'othree/html5.vim'
 
-" Syntastic config
-let g:syntastic_javascript_checkers = ['eslint']
+call vundle#end()
+filetype plugin indent on
 
-" Vim-closetag config
-let g:closetag_filenames = "*.html, *.vue"
+" use in-built matchit plugin
+runtime macros/matchit.vim
 
-" set linux alt mappings
-execute "set <A-j>=\ej"
-execute "set <A-k>=\ek"
+" output the current syntax group
+nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
 
-" Move lines and blocks up/down using Alt k/j
-" http://vim.wikia.com/wiki/Moving_lines_up_or_down
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+" custom mappings
+map! kj <esc>
+map! jk <esc>
