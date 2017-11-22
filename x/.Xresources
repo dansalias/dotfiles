@@ -1,5 +1,6 @@
 URxvt.font: xft:Inconsolata:size=14:antialias=true
 URxvt.scrollBar: false
+URxvt.internalBorder: 4
 
 ! special
 *.foreground:   #718ca1
