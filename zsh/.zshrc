@@ -25,6 +25,9 @@ export VISUAL="vim"
   alias e="exit"
   alias l="ls -A -F --color --group-directories-first"
 
+  # apps
+  alias x="startx"
+
   # tree
   alias tree="tree -a -I 'node_modules|.git'"
 
