@@ -7,7 +7,6 @@ set smartcase
 
 " interface
 set number
-set relativenumber
 set nowrap
 
 " syntax
