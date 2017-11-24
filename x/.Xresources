@@ -1,40 +1,67 @@
+! colours
+#define fg #718ca1
+#define bg #1d252c
+#define grayDark #37434f
+#define blue #5ec4ff
+#define blueDark #539afc
+#define red #e32f41
+#define redDark #ad2634
+#define green #8bd49c
+#define greenDark #6ba478
+#define yellow #ebbf83
+#define yellowDark #d98e48
+#define magenta #e27e8d
+#define magentaDark #b62d65
+#define cyan #33ced8
+#define cyanDark #008b94
+#define white #b7c5d3
+
+! special
+*.foreground:   fg
+*.background:   bg
+*.cursorColor:  fg
+
+! black
+*.color0:       bg
+*.color8:       grayDark
+
+! red
+*.color1:       redDark
+*.color9:       red
+
+! green
+*.color2:       greenDark
+*.color10:      green
+
+! yellow
+*.color3:       yellowDark
+*.color11:      yellow
+
+! blue
+*.color4:       blueDark
+*.color12:      blue
+
+! magenta
+*.color5:       magentaDark
+*.color13:      magenta
+
+! cyan
+*.color6:       cyanDark
+*.color14:      cyan
+
+! white
+*.color7:       fg
+*.color15:      white
+
+! rofi
+rofi.font: Inconsolata 16
+rofi.hide-scrollbar: true
+rofi.color-window: bg, grayDark, bg
+rofi.color-normal: bg, fg, bg, grayDark, fg
+rofi.color-active: bg, blue, bg, grayDark, blue
+rofi.color-urgent: bg, red, bg, grayDark, red
+
+! URxvt
 URxvt.font: xft:Inconsolata:size=14:antialias=true
 URxvt.scrollBar: false
 URxvt.internalBorder: 4
-
-! special
-*.foreground:   #718ca1
-*.background:   #1d252c
-*.cursorColor:  #718ca1
-
-! black
-*.color0:       #1d252c
-*.color8:       #37434f
-
-! red
-*.color1:       #ad2634
-*.color9:       #e32f41
-
-! green
-*.color2:       #6ba478
-*.color10:      #8bd49c
-
-! yellow
-*.color3:       #d98e48
-*.color11:      #ebbf83
-
-! blue
-*.color4:       #539afc
-*.color12:      #5ec4ff
-
-! magenta
-*.color5:       #b62d65
-*.color13:      #e27e8d
-
-! cyan
-*.color6:       #008b94
-*.color14:      #33ced8
-
-! white
-*.color7:       #718ca1
-*.color15:      #b7c5d3

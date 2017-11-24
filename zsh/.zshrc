@@ -24,21 +24,23 @@ export VISUAL="vim"
   alias t="tmux"
   alias e="exit"
   alias l="ls -A -F --color --group-directories-first"
-
-  # apps
   alias x="startx"
-
-  # tree
-  alias tree="tree -a -I 'node_modules|.git'"
-
-  # git
   alias g="git"
+  alias tree="tree -a -I 'node_modules|.git'"
 
   # config files
   alias -g tconf=~/.tmux.conf
   alias -g zconf=~/.zshrc
   alias -g vconf=~/.vimrc
   alias -g gconf=~/.gitconfig
+  alias -g iconf=~/.config/i3/config
+  alias -g pconf=~/.config/polybar/config
+  alias -g xconf=~/.Xresources
+  alias -g cconf=~/.config/compton.conf
+
+  # reload
+  alias rp="pkill -USR1 polybar"
+  alias rz=". zconf"
 
 # Utility
 mkcd () {

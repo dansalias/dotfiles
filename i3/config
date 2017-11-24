@@ -5,6 +5,12 @@
 # Use Alt key as $mod
 set $mod Mod1
 
+# Use vim motion keys
+set $vleft h
+set $vdown j
+set $vup k
+set $vright l
+
 # Set font
 font pango:Inconsolata 12
 
@@ -17,36 +23,20 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# start rofi
+bindsym $mod+d exec rofi -show run
 
-# change focus using vim motions
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# change focus
+bindsym $mod+$vleft focus left
+bindsym $mod+$vdown focus down
+bindsym $mod+$vup focus up
+bindsym $mod+$vright focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+$vleft move left
+bindsym $mod+Shift+$vdown move down
+bindsym $mod+Shift+$vup move up
+bindsym $mod+Shift+$vright move right
 
 # split in horizontal orientation
 bindsym $mod+b split h
@@ -107,26 +97,23 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
+
         # These bindings trigger as soon as you enter the resize mode
+        bindsym $vleft resize shrink width 1 px or 1 ppt
+        bindsym $vright resize grow width 1 px or 1 ppt
+        bindsym $vup resize grow height 1 px or 1 ppt
+        bindsym $vdown resize shrink height 1 px or 1 ppt
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym Shift+$vleft resize shrink width 10 px or 10 ppt
+        bindsym Shift+$vright resize grow width 10 px or 10 ppt
+        bindsym Shift+$vup resize grow height 10 px or 10 ppt
+        bindsym Shift+$vdown resize shrink height 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym e mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -134,6 +121,12 @@ bindsym $mod+r mode "resize"
 # launch polybar automatically
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# autostart compton
+exec --no-startup-id compton
+
+# apply wallpaper
+exec --no-startup-id feh --bg-fill ~/downloads/reindeer.1080p.jpg
+
 # disable window titlebars
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 gaps inner 8
