@@ -12,6 +12,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Style prompt
+PROMPT='%F{green}%n@%m %F{blue}%~: %F{reset_color}'
+
 # Environment variables
 export VISUAL="vim"
 
