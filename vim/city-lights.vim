@@ -25,9 +25,10 @@ let cyan=14
 let cyanDark=6
 
 " interface
-hi Normal  ctermfg=gray  ctermbg=0
+hi Normal  ctermfg=7  ctermbg=0
 hi LineNr  ctermfg=8
-hi CursorLineNr  ctermfg=gray
+hi clear CursorLine
+hi CursorLineNr  ctermfg=7
 
 " syntax
 hi Comment ctermfg=8

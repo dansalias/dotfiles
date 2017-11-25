@@ -7,6 +7,7 @@ set smartcase
 
 " interface
 set number
+set cursorline
 set nowrap
 
 " syntax
