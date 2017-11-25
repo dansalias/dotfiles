@@ -54,9 +54,11 @@
 *.color15:      white
 
 ! rofi
+rofi.terminal: urxvt
 rofi.font: Inconsolata 16
 rofi.hide-scrollbar: true
-rofi.color-window: bg, grayDark, bg
+rofi.separator-style: solid
+rofi.color-window: bg, grayDark, grayDark
 rofi.color-normal: bg, fg, bg, grayDark, fg
 rofi.color-active: bg, blue, bg, grayDark, blue
 rofi.color-urgent: bg, red, bg, grayDark, red
