@@ -118,17 +118,17 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# launch polybar automatically
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 # autostart compton
-exec --no-startup-id compton
-
-# apply wallpaper
-exec --no-startup-id feh --bg-fill ~/downloads/reindeer.1080p.jpg
+# exec --no-startup-id compton
 
 # set resolution
-exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080
+exec_always --no-startup-id xrandr --output VGA-1 --auto --output VGA-2 --auto --right-of VGA-1
+
+# apply wallpaper
+exec_always --no-startup-id feh --bg-fill ~/downloads/reindeer.1080p.jpg
+
+# launch polybar automatically
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # disable window titlebars
 for_window [class="^.*"] border pixel 0

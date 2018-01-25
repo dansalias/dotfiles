@@ -67,3 +67,4 @@ rofi.color-urgent: bg, red, bg, grayDark, red
 URxvt.font: xft:Inconsolata:size=14:antialias=true
 URxvt.scrollBar: false
 URxvt.internalBorder: 4
+URxvt.saveLines: 10000

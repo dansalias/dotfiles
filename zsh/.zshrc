@@ -15,6 +15,9 @@ compinit
 # Style prompt
 PROMPT='%F{green}%n@%m %F{blue}%~: %F{reset_color}'
 
+# Add ruby gems to path
+export PATH=/home/daniel/.gem/ruby/2.4.0/bin:$PATH
+
 # Environment variables
 export VISUAL="vim"
 
@@ -24,7 +27,7 @@ export VISUAL="vim"
   alias c="clear"
   alias p="pwd"
   alias v="vim"
-  alias t="tmux"
+  alias m="ncmpcpp"
   alias e="exit"
   alias l="ls -A -F --color --group-directories-first"
   alias x="startx"
@@ -50,3 +53,6 @@ mkcd () {
   mkdir "$1"
   cd "$1"
 }
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
