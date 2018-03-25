@@ -1,10 +1,5 @@
 # dotfiles
-My dotfiles and scripts for bootstrapping a clean Debian installation.
-
-## NOTE!
-Do not blindly use the `user_config.sh` script to configure an existing installation, this will have serious consequences (such as **_wiping your home directory_**).
-The following instructions are designed to setup a fresh minimal Debian installation (no GUI) with Gnome, the Arc Theme, Numix Icons, and a small number of packages that I use for web development.
-Feel free to fork the repo and/or use it as inspiration for your own dotfiles.
+For Arch Linux & i3
 
 ## Debian Installation
 - Install Debian using the Expert Installer (Advanced Options -> Expert Install).

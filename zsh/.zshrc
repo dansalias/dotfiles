@@ -45,7 +45,7 @@ export VISUAL="vim"
   alias -g cconf=~/.config/compton.conf
 
   # reload
-  alias rp="pkill -USR1 polybar"
+  alias rp="~/.config/polybar/launch.sh"
   alias rz=". zconf"
 
 # Utility
