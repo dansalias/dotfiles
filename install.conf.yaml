@@ -1,0 +1,16 @@
+- link:
+  # ui
+  ~/.xinitrc: ui/.xinitrc
+  ~/.Xresources: ui/.Xresources
+  ~/.config/i3/config: ui/i3.config
+  ~/.config/compton.conf: ui/compton.conf
+  ~/.config/polybar/config: ui/polybar.config
+  ~/.config/polybar/launch.sh: ui/polybar-launch.sh
+  ~/.config/rofi/config: ui/rofi.config
+  # terminal
+  ~/.zshrc: terminal/.zshrc
+  # git
+  ~/.gitconfig: git/.gitconfig
+  # vim
+  ~/.vimrc: vim/.vimrc
+  ~/.vim/colors/city-lights.vim: vim/city-lights.vim
