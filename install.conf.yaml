@@ -8,7 +8,7 @@
   ~/.config/polybar/launch.sh: ui/polybar-launch.sh
   ~/.config/rofi/config: ui/rofi.config
   # terminal
-  ~/.zshrc: terminal/.zshrc
+  ~/.zshrc: zsh/.zshrc
   # git
   ~/.gitconfig: git/.gitconfig
   # vim
