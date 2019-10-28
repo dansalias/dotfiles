@@ -1,8 +1,8 @@
 [credential]
-  helper = cache --timeout=3600
+	helper = store
 [user]
-  name = d4n13ly
-  email = kiwidan92@gmail.com
+  name = dansalias
+  email = danyoungnz@gmail.com
 [remote "origin"]
   receivepack = git-receive-pack
 [push]
@@ -15,3 +15,4 @@
   c = commit
   p = push
   d = diff
+  cp = cherry-pick

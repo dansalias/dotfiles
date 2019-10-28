@@ -1,3 +1,7 @@
+! general
+Xft.dpi: 192
+*dpi: 192
+
 ! colours
 #define fg #718ca1
 #define bg #1d252c
@@ -38,7 +42,8 @@
 *.color11:      yellow
 
 ! blue
-*.color4:       blueDark
+!*.color4:       blueDark
+*.color4:       fg
 *.color12:      blue
 
 ! magenta
@@ -62,9 +67,17 @@ rofi.color-window: bg, grayDark, grayDark
 rofi.color-normal: bg, fg, bg, grayDark, fg
 rofi.color-active: bg, blue, bg, grayDark, blue
 rofi.color-urgent: bg, red, bg, grayDark, red
+rofi.modi: window,run
+
+rofi.kb-accept-entry: Return
+rofi.kb-remove-to-eol: Control+0
+rofi.kb-mode-next: Control+j
+rofi.kb-mode-previous: Control+k
 
 ! URxvt
-URxvt.font: xft:Inconsolata:size=14:antialias=true
+URxvt.perl-ext-common: font-size
+URxvt.font-size.step: 2
+URxvt.font: xft:Inconsolata:size=16:antialias=true, xft: dejavu sans mono:size=16:antialias=true
 URxvt.scrollBar: false
-URxvt.internalBorder: 4
+URxvt.internalBorder: 8
 URxvt.saveLines: 10000

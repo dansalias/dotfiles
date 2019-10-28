@@ -19,9 +19,10 @@ alert = ${xrdb:color11}
 error = ${xrdb:color1}
 
 [bar/default]
+dpi = 192
 monitor = ${env:MONITOR}
 width = 100%
-height = 27
+height = 54
 fixed-center = true
 
 background = ${colors.background}
@@ -35,18 +36,23 @@ padding-right = 1;
 
 module-margin = 1
 
-font-0 = Inconsolata:size=11;1
+font-0 = Inconsolata:size=11;4
 
 modules-left = i3 mpd
 modules-center = date
-modules-right = filesystem memory cpu volume network
+modules-right = filesystem memory cpu volume network battery
 
 tray-position = right
 tray-padding = 0
 
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+
 [module/network]
 type = internal/network
-interface = enp0s3
+interface = wlp58s0
 
 format-connected = <label-connected>
 label-connected = %ifname%
@@ -63,7 +69,6 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted

@@ -17,6 +17,10 @@ font pango:Inconsolata 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# set floating window size
+floating_minimum_size 900 x 900
+floating_maximum_size 900 x 900
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -27,14 +31,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+space exec rofi -show run
 
 # change focus
-# bindsym $mod+$vleft focus left
-# bindsym $mod+$vdown focus down
-# bindsym $mod+$vup focus up
-# bindsym $mod+$vright focus right
-bindsym --release $mod+h exec --no-startup-id "i3-vim-nav h"
-bindsym --release $mod+j exec --no-startup-id "i3-vim-nav j"
-bindsym --release $mod+k exec --no-startup-id "i3-vim-nav k"
-bindsym --release $mod+l exec --no-startup-id "i3-vim-nav l"
+bindsym $mod+$vleft focus left
+bindsym $mod+$vdown focus down
+bindsym $mod+$vup focus up
+bindsym $mod+$vright focus right
 
 # move focused window
 bindsym $mod+Shift+$vleft move left
@@ -125,11 +125,8 @@ bindsym $mod+r mode "resize"
 # autostart compton
 # exec --no-startup-id compton
 
-# set resolution
-exec_always --no-startup-id xrandr --output VGA-1 --auto --output VGA-2 --auto --right-of VGA-1
-
 # apply wallpaper
-exec_always --no-startup-id feh --bg-fill ~/downloads/reindeer.1080p.jpg
+exec_always --no-startup-id feh --bg-center ~/projects/dotfiles/ui/arch_linux_3840x2400.jpg
 
 # launch polybar automatically
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -137,3 +134,15 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # disable window titlebars
 for_window [class="^.*"] border pixel 0
 gaps inner 8
+
+# screen brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+
+# volume control
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
+
+# lock screen
+bindsym $mod+x exec --no-startup-id ~/scripts/lock-screen.sh

@@ -1,0 +1,23 @@
+ttf-croscore        # Google croscore fonts
+ttf-roboto          # Roboto font
+ttf-inconsolata     # Inconsolata font
+
+light               # Backlight adjustment
+
+pass                # Password manager
+pass-import         # Pass extension to import passwords
+
+firefox-developer-edition   # Firefox Developer Edition
+google-chrome-stable        # Google Chrome
+
+bluez                       # Bluetooth protocol
+bluez-firmware
+bluez-utils                 # Bluetoothctl
+
+nodejs
+npm
+
+unclutter                   # hide cursor when not in use
+
+i3lock                      # lock screen
+scrot                       # screenshots
