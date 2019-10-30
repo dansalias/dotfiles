@@ -6,7 +6,6 @@
   ~/.config/compton.conf: ui/compton.conf
   ~/.config/polybar/config: ui/polybar.config
   ~/.config/polybar/launch.sh: ui/polybar-launch.sh
-  ~/.config/rofi/config: ui/rofi.config
   # terminal
   ~/.zshrc: zsh/.zshrc
   # git
