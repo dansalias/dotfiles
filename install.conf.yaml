@@ -1,3 +1,7 @@
+- shell:
+  - git clone https://github.com/majutsushi/urxvt-font-size ~/.urxvt/ext
+  - cd ~/.urxvt/ext && ln -s urxvt-font-size/font-size
+
 - link:
   # ui
   ~/.xinitrc: ui/.xinitrc
