@@ -33,6 +33,7 @@ yay -Syyu \
   i3-gaps-next-git \
   i3lock \
   rxvt-unicode \
+  feh \
   scrot \
   unclutter \
   polybar \
