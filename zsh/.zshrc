@@ -55,7 +55,6 @@ export VISUAL="vim"
   alias sc="ffmpeg -f x11grab -y -r 30 -s 3200x1800 -i :0.0 -vcodec huffyuv"
 
   # config files
-  alias -g tconf=~/.tmux.conf
   alias -g zconf=~/.zshrc
   alias -g vconf=~/.vimrc
   alias -g gconf=~/.gitconfig
