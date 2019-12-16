@@ -21,11 +21,6 @@ export PATH=/home/daniel/.local/bin:/home/daniel/.gem/ruby/2.5.0/bin:$PATH
 # Add go binaries to path
 export PATH=~/go/bin:$PATH
 
-# Load nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Environment variables
 export VISUAL="vim"
 
@@ -53,6 +48,7 @@ export VISUAL="vim"
   alias 1080="xrandr --output eDP1 --off --output DP1 --auto --scale 2x2 --panning 3840x2160 && feh --bg-fill ~/projects/dotfiles/ui/arch_linux_3840x2400.png"
   alias 1080p="xrandr --output eDP1 --off --output DP1 --auto 1920x1080"
   alias sc="ffmpeg -f x11grab -y -r 30 -s 3200x1800 -i :0.0 -vcodec huffyuv"
+  alias ns=$HOME/scripts/node-switch.sh
 
   # config files
   alias -g zconf=~/.zshrc
@@ -89,3 +85,13 @@ export FZF_DEFAULT_COMMAND='find -L * -type d -name "node_modules" -prune -o -ty
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
+
+# switch node version based on .nvmrc
+default_node_version=12.13.1
+chpwd() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    ns switch "$(< .nvmrc)"
+  elif [[ $(node --version) != v$default_node_version ]]; then
+    ns switch $default_node_version
+  fi
+}
