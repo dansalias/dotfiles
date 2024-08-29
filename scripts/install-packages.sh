@@ -15,6 +15,8 @@ makepkg -si
 yay -Syyu \
   # system
   pulseaudio \
+  pulseaudio-alsa \
+  pulseaudio-bluetooth \
   imagemagick \
   bluez \
   bluez-firmware \
@@ -28,11 +30,13 @@ yay -Syyu \
   nodejs \
   httpie \
   neofetch \
+  github-cli-bin \
   # ui
   xorg \
   i3-gaps-next-git \
   i3lock \
   rxvt-unicode \
+  xcwd-git \
   feh \
   scrot \
   unclutter \
