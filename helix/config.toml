@@ -1,0 +1,11 @@
+# ln ~/.config/helix/config.toml
+
+theme = "custom"
+
+[keys.insert.j]
+k = "normal_mode"
+
+[keys.insert.k]
+j = "normal_mode"
+
+[editor]

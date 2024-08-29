@@ -1,0 +1,37 @@
+# ln ~/.config/helix/themes/custom.toml
+
+# ui
+"ui.cursor" = { fg = "black", bg = "white" }
+"ui.linenr" = "gray"
+"ui.linenr.selected" = "white"
+"ui.selection" = { fg = "white", bg = "gray" }
+"ui.statusline" = { bg = "white", fg = "black" }
+
+"diff.delta" = "yellow"
+"diff.plus" = "green"
+"diff.minus" = "red"
+
+"warning" = "yellow"
+"error" = "red"
+"info" = "light-blue"
+"hint" = "light-green"
+
+# syntax
+"attribute" = "yellow"
+"comment" = "gray"
+"constant" = "blue"
+"constructor" = "magenta"
+"function" = "blue"
+"keyword" = "cyan"
+"namespace" = "magenta"
+"string" = "green"
+"tag" = "cyan"
+"type" = "light-yellow"
+"variable" = "light-cyan"
+
+[palette]
+black = "#000000"
+white = "#ffffff"
+gray = "#6e6e6e"
+
+green="#1cd929"

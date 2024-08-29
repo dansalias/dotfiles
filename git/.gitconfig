@@ -1,0 +1,29 @@
+# ln ~/.gitconfig
+
+[alias]
+  s = status
+  a = add
+  c = commit
+  d = diff
+
+[core]
+  editor = helix
+
+[credential]
+  helper = store
+
+[init]
+  defaultBranch = trunk
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+
+[remote "origin"]
+  receivepack = git-receive-pack
+
+[user]
+  name = dansalias
+  email = danyoungnz@gmail.com

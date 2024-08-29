@@ -1,0 +1,60 @@
+#include ~/.xcolors
+
+! general
+Xft.dpi: 192
+*dpi: 192
+
+! colours
+#define bg #1b2730
+#define fg #718ca1
+#define gray #4c4854
+#define blue #5ec4ff
+#define blueDark #539afc
+#define red #ff3f41
+#define redDark #c52634
+#define green #8bff9c
+#define greenDark #62be7a
+#define yellow #ebbf83
+#define yellowDark #d98e48
+#define magenta #e27e8d
+#define magentaDark #b62d65
+#define cyan #33ced8
+#define cyanDark #209ba4
+#define white #b7c5d3
+
+! special
+*.foreground:   fg
+*.background:   bg
+*.cursorColor:  fg
+
+! black
+*.color0:       bg
+*.color8:       gray
+
+! red
+*.color1:       redDark
+*.color9:       red
+
+! green
+*.color2:       greenDark
+*.color10:      green
+
+! yellow
+*.color3:       yellowDark
+*.color11:      yellow
+
+! blue
+*.color4:       fg
+*.color12:      blue
+
+! magenta
+*.color5:       magentaDark
+*.color13:      magenta
+
+! cyan
+*.color6:       cyanDark
+*.color14:      cyan
+
+! white
+*.color7:       fg
+*.color15:      white
