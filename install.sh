@@ -27,7 +27,7 @@ yay -S --noconfirm \
 (
   git clone https://git.suckless.org/st ~/pkg/st && cd ~/pkg/st
 
-  ln  -s ~/projects/df/colors.h ~/pkg/st/colors.h
+  ln  -s ~/dotfiles/colors.h ~/pkg/st/colors.h
 
   cp config.def.h config.h
 
