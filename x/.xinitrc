@@ -8,4 +8,6 @@ COLORS=$(cat ~/dotfiles/colors.h)
 echo "${COLORS//\"}" > ~/.xcolors
 xrdb -load ~/dotfiles/x/.xdefaults
 
+light -N 1
+
 exec i3

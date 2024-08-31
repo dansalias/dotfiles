@@ -122,8 +122,10 @@ exec_always --no-startup-id $HOME/dotfiles/polybar/launch.sh
 exec_always --no-startup-id unclutter -grab -idle 1
 
 # screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/scripts/backlight-adjust.sh increase
-bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/scripts/backlight-adjust.sh decrease
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1
+bindsym Shift+XF86MonBrightnessUp exec --no-startup-id light -A 12
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1
+bindsym Shift+XF86MonBrightnessDown exec --no-startup-id light -U 12
 
 # volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
