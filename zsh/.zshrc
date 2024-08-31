@@ -5,7 +5,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 EDITOR=helix
-PROMPT='%F{green}%n@%m %F{blue}%~: %F{reset_color}'
+PROMPT='%F{blue}%~: %F{reset_color}'
 
 setopt appendhistory autocd extendedglob
 bindkey -v
