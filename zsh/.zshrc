@@ -21,12 +21,12 @@ alias t="tree -a --dirsfirst --gitignore -I .git"
 alias wifi="sudo wifi-menu"
 alias x="startx"
 
-alias -g gconf=~/.gitconfig
-alias -g hconf=~/.config/helix/config.toml
-alias -g iconf=~/.i3/config
-alias -g pconf=~/.config/polybar/config
-alias -g xconf=~/.Xresources
-alias -g zconf=~/.zshrc
+alias -g gconf='~/dotfiles/git/*'
+alias -g hconf='~/dotfiles/helix/*'
+alias -g iconf='~/dotfiles/i3/*'
+alias -g pconf='~/dotfiles/polybar/*'
+alias -g xconf='~/dotfiles/x/*(D)'
+alias -g zconf='~/dotfiles/zsh/*(D)'
 
 mkcd () {
   mkdir -p "$1"
