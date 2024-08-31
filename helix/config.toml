@@ -8,4 +8,5 @@ k = "normal_mode"
 [keys.insert.k]
 j = "normal_mode"
 
-[editor]
+[editor.file-picker]
+hidden = false
