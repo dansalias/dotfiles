@@ -28,6 +28,10 @@ alias -g pconf='~/dotfiles/polybar/*'
 alias -g xconf='~/dotfiles/x/*(D)'
 alias -g zconf='~/dotfiles/zsh/*(D)'
 
+dotfiles () {
+  ~/dotfiles/${1}.sh $2
+}
+
 mkcd () {
   mkdir -p "$1"
   cd "$1"
