@@ -1,6 +1,4 @@
-My dotfiles.
-
-![screenshot showing 3 terminal windows open in i3](./media/screenshot.webp)
+My dotfiles. [screenshot](./media/screenshot.webp)
 
 There's some unique wizardry which might be interesting:
 
