@@ -114,6 +114,8 @@ mode "resize" {
         bindsym e mode "default"
 }
 
+# launch picom
+exec_always --no-startup-id picom -b
 
 # launch polybar automatically
 exec_always --no-startup-id $HOME/dotfiles/polybar/launch.sh
