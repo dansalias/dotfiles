@@ -1,13 +1,27 @@
 #!/bin/bash
 
+while getopts ":v" opt; do
+  case $opt in
+    v)
+      export VERBOSE=true
+      shift
+      ;;
+  esac
+done
+
 __help () {
   cat << EOF
-Usage: ./ln.sh <command>
+Usage: ./ln.sh [-v] <command>
+
   Commands:
     clean  - remove all links
     link   - (re)create links
     list   - show all links
     update - add/remove links from last git commit
+
+  Options:
+    -v     - verbose (show creating/removing links)
+
 EOF
 }
 
@@ -18,6 +32,7 @@ export -f __sudo
 
 __ln () {
   if [[ $(readlink $2) != $1 ]]; then
+    [[ $VERBOSE = true ]] && echo "creating $2"
     $(__sudo $2) mkdir -p $(dirname $2)
     $(__sudo $2) ln -sf $1 $2
   fi
@@ -25,6 +40,7 @@ __ln () {
 export -f __ln
 
 __rm () {
+  [[ $VERBOSE = true ]] && echo "removing $1"
   $(__sudo $1) rm -f $1
 }
 export -f __rm
@@ -62,7 +78,6 @@ list () {
 update () {
   git diff HEAD~ | awk '/\-\S*\s+ln/ {
     if(prevLine ~ /@@ -1/) {
-      system("echo \"removing\" " $3)
       system("__rm " $3)
     }
   } { prevLine=$0 }'

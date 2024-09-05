@@ -29,7 +29,7 @@ alias -g xconf='~/dotfiles/x/*(D)'
 alias -g zconf='~/dotfiles/zsh/*(D)'
 
 dotfiles () {
-  ~/dotfiles/${1}.sh $2
+  ~/dotfiles/${1}.sh "${@:2}"
 }
 
 mkcd () {
