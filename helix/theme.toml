@@ -7,6 +7,10 @@
 "ui.selection" = { fg = "white", bg = "gray" }
 "ui.statusline" = { bg = "white", fg = "black" }
 
+"diagnostic" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+
 "diff.delta" = "yellow"
 "diff.plus" = "green"
 "diff.minus" = "red"
