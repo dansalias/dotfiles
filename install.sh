@@ -67,3 +67,4 @@ npm i -g \
   typescript \
   typescript-language-server \
   @vue/language-server \
+  @vue/typescript-plugin \

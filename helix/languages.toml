@@ -1,0 +1,11 @@
+# ln ~/.config/helix/languages.toml
+
+[[language]]
+name = "vue"
+auto-format = true
+language-servers = ["typescript-language-server"]
+
+[[language-server.typescript-language-server.config.plugins]]
+name = "@vue/typescript-plugin"
+location = "/home/daniel/.volta/tools/shared/@vue/language-server"
+languages = ["vue"]
