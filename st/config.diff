@@ -12,7 +12,7 @@
   */
 -static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 -static int borderpx = 2;
-+static char *font = "Inconsolata:pixelsize=32:antialias=true:autohint=true";
++static char *font = "Inconsolata:pixelsize=28:antialias=true:autohint=true";
 +static int borderpx = 8;
  
  /*

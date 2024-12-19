@@ -10,8 +10,8 @@ set $up k
 set $right l
 
 # appearance
-gaps inner 8
-font pango:Inconsolata 11
+gaps inner 2
+font pango:Inconsolata 10
 for_window [class="^.*"] border pixel 0
 
 # mouse+$mod to drag floating windows
@@ -26,8 +26,8 @@ bindsym $mod+Return exec --no-startup-id st
 bindsym $mod+Shift+Return exec --no-startup-id st -d `xcwd`
 
 # browsers
-bindsym Control+g exec --no-startup-id google-chrome-stable
-bindsym Control+Shift+g exec --no-startup-id google-chrome-stable --incognito
+bindsym Control+g exec --no-startup-id google-chrome-stable --force-device-scale-factor=1.8
+bindsym Control+Shift+g exec --no-startup-id google-chrome-stable --force-device-scale-factor=1.8 --incognito
 
 # change focus
 bindsym $mod+$left focus left
