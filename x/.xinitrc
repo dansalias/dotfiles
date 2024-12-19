@@ -10,6 +10,6 @@ xrdb -load ~/dotfiles/x/.xdefaults
 
 light -N 1
 
-feh --bg-center ~/dotfiles/media/wallpaper-lake.png
+feh --bg-center ~/dotfiles/media/wallpaper-llamas.jpg
 
 exec i3
