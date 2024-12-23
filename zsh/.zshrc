@@ -18,6 +18,7 @@ alias h="helix"
 alias l="ls -1AF --color --group-directories-first"
 alias sd="sudo shutdown now"
 alias t="tree -a --dirsfirst --gitignore -I .git"
+alias tz="timedatectl set-timezone"
 alias wifi="sudo wifi-menu"
 alias x="startx"
 
