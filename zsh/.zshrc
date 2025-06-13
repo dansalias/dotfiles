@@ -20,6 +20,7 @@ alias sd="sudo shutdown now"
 alias srv="npx servor --reload"
 alias t="tree -a --dirsfirst --gitignore -I .git"
 alias tz="timedatectl set-timezone"
+alias u="~/dotfiles/update.sh"
 alias wifi="sudo wifi-menu"
 alias x="startx"
 
