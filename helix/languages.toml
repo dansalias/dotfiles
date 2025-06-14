@@ -1,5 +1,23 @@
 # ln ~/.config/helix/languages.toml
 
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+feature_snippets = true
+
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-language-server=info"
+LOG_FILE = "/tmp/completion.log"
+
+[[language]]
+name = "rust"
+language-servers = ["scls", "rust-analyzer"]
+
+[[language]]
+name = "html"
+language-servers = ["scls", "vscode-html-language-server"]
+
 [[language]]
 name = "vue"
 auto-format = true

@@ -4,12 +4,16 @@ theme = "custom"
 
 [editor]
 auto-format = false
+completion-trigger-len = 1
+
+[editor.lsp]
+snippets = true
+
+[editor.file-picker]
+hidden = false
 
 [keys.insert.j]
 k = "normal_mode"
 
 [keys.insert.k]
 j = "normal_mode"
-
-[editor.file-picker]
-hidden = false

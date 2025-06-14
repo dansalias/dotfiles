@@ -25,7 +25,7 @@ alias wifi="sudo wifi-menu"
 alias x="startx"
 
 alias -g gconf='~/dotfiles/git/*'
-alias -g hconf='~/dotfiles/helix/*'
+alias -g hconf='~/dotfiles/helix/**/*.toml'
 alias -g iconf='~/dotfiles/i3/*'
 alias -g pconf='~/dotfiles/polybar/*'
 alias -g piconf='~/dotfiles/picom/*'
