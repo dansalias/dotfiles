@@ -3,6 +3,7 @@
 theme = "custom"
 
 [editor]
+true-color = true
 auto-format = false
 completion-trigger-len = 1
 

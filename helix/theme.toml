@@ -21,17 +21,22 @@
 "hint" = "light-green"
 
 # syntax
-"attribute" = "yellow"
-"comment" = "gray"
-"constant" = "blue"
-"constructor" = "magenta"
-"function" = "blue"
-"keyword" = "cyan"
-"namespace" = "magenta"
-"string" = "green"
-"tag" = "cyan"
+"attribute" = "light-yellow"
 "type" = "light-yellow"
-"variable" = "light-cyan"
+"constructor" = "light-yellow"
+"constant" = "blue"
+"string" = "green"
+"comment" = { fg = "gray", modifiers = ["italic"] }
+"variable" = "cyan"
+"variable.builtin" = "magenta"
+"variable.other.member" = "light-cyan"
+"label" = "magenta"
+"punctuation" = "light-cyan"
+"keyword" = "magenta"
+"function" = "light-blue"
+"tag" = "cyan"
+"namespace" = "magenta"
+"special" = "magenta"
 
 [palette]
 black = "#000000"
