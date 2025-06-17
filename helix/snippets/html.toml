@@ -13,6 +13,5 @@ body = '''
   <body>
     $0
   </body>
-</html>
-'''
+</html>'''
 description = "html doc"
