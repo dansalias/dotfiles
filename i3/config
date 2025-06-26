@@ -22,8 +22,7 @@ floating_minimum_size 900 x 900
 floating_maximum_size 1800 x 1800
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id st
-bindsym $mod+Shift+Return exec --no-startup-id st -d `xcwd`
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # browsers
 bindsym Control+g exec --no-startup-id google-chrome-stable --force-device-scale-factor=1.8

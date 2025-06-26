@@ -12,6 +12,7 @@ pacman -S --needed git
 
 # packages/aur
 yay -S --noconfirm \
+  alacritty \
   aws-cli-v2 \
   chromium \
   feh \
@@ -22,27 +23,6 @@ yay -S --noconfirm \
   ttf-inconsolata \
   xorg-server \
   xorg-xinit \
-
-# st
-(
-  git clone https://git.suckless.org/st ~/pkg/st && cd ~/pkg/st
-
-  ln  -s ~/dotfiles/colors.h ~/pkg/st/colors.h
-
-  cp config.def.h config.h
-
-  mkdir ./patches
-
-  curl -o ./patches/workingdir.diff \
-    https://st.suckless.org/patches/workingdir/st-workingdir-20200317-51e19ea.diff
-
-  curl -o ./patches/scrollback.diff \
-    https://st.suckless.org/patches/scrollback/st-scrollback-ringbuffer-0.9.2.diff
-
-  ls -1 ./patches | xargs -I patchfile patch -i ./patches/patchfile
-
-  make clean install
-)
 
 # node
 curl https://get.volta.sh | bash
