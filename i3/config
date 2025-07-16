@@ -10,7 +10,7 @@ set $up k
 set $right l
 
 # appearance
-gaps inner 2
+gaps inner 1
 font pango:Inconsolata 10
 for_window [class="^.*"] border pixel 0
 
