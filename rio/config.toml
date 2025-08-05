@@ -1,0 +1,12 @@
+# ln ~/.config/rio/config.toml
+
+theme = "ayu_mirage"
+
+fonts.family = "Hack"
+
+padding-x = 4
+padding-y = [4, 4]
+
+[editor]
+program = "helix"
+args = []
