@@ -130,6 +130,10 @@ bindsym Control+Shift+XF86MonBrightnessDown exec --no-startup-id light -S 1
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1
 bindsym Shift+XF86MonBrightnessUp exec --no-startup-id light -A 12
 bindsym Control+Shift+XF86MonBrightnessUp exec --no-startup-id light -S 100
+bindsym --whole-window $mod+button6 exec --no-startup-id light -U 1
+bindsym --whole-window $mod+Shift+button6 exec --no-startup-id light -U 12
+bindsym --whole-window $mod+button7 exec --no-startup-id light -A 1
+bindsym --whole-window $mod+Shift+button7 exec --no-startup-id light -A 12
 
 # volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
