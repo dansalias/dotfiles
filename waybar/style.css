@@ -1,0 +1,22 @@
+/* ln ~/.config/waybar/style.css */
+
+* {
+  font: 0.82rem 'Hack', monospace;
+}
+
+window#waybar {
+  background: rgba(31, 36, 48, 100);
+  color: #abaca6;
+}
+
+label.module {
+  padding: 0.3rem 0.5rem 0.35rem;
+}
+
+.modules-left {
+  padding: 0 0 0 0.25rem;
+}
+
+.modules-right {
+  padding: 0 0.25rem 0 0;
+}

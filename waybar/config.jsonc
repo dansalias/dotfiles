@@ -1,0 +1,53 @@
+// ln ~/.config/waybar/config.jsonc
+
+{
+  // "height": 27,
+  "modules-left": [
+    "disk",
+    "memory",
+    "cpu"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "backlight",
+    "pulseaudio",
+    "battery"
+  ],
+  "disk": {
+    "interval": 5,
+    "format": "<span color='#777'>hdd:</span> {percentage_used}%"
+  },
+  "memory": {
+    "interval": 1,
+    "format": "<span color='#777'>mem:</span> {percentage}%"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "<span color='#777'>cpu:</span> {usage}%"
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%a %b %d - %H:%M}",
+    "format-alt": "{:%Y-%m-%d %H:%M:%S (%Z/UTC%z)}",
+    "tooltip": false
+  },
+  "backlight": {
+    "format": "<span color='#777'>bl:</span> {percent}%"
+  },
+  "pulseaudio": {
+    "format": "<span color='#777'>vol:</span> {volume}%"
+  },
+  "network": {
+    "format": "<span color='#777'>net:</span> {essid}"
+  },
+  "bluetooth": {
+    "format": "<span color='#777'>bt:</span> {num_connections}"
+  },
+  "battery": {
+    "format": "<span color='#777'>bat:</span> {capacity}%"
+  }
+}

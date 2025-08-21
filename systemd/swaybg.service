@@ -1,0 +1,10 @@
+# ln ~/.config/systemd/user/swaybg.service
+
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swaybg -m center -i "%h/dotfiles/media/wallpaper-llamas.jpg"
+Restart=on-failure
