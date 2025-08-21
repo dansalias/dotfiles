@@ -9,6 +9,7 @@ completion-trigger-len = 1
 
 [editor.lsp]
 snippets = true
+display-color-swatches = false
 
 [editor.file-picker]
 hidden = false
