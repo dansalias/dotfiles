@@ -172,6 +172,7 @@ binds {
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
 
     Mod+Ctrl+F { expand-column-to-available-width; }
 
