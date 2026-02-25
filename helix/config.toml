@@ -19,3 +19,6 @@ k = "normal_mode"
 
 [keys.insert.k]
 j = "normal_mode"
+
+[keys.normal]
+C-f = ":format"

@@ -1,29 +1,21 @@
 # ln ~/.config/helix/languages.toml
 
-[language-server.scls]
-command = "simple-completion-language-server"
+# defaults: https://github.com/helix-editor/helix/blob/master/languages.toml
 
-[language-server.scls.config]
-feature_snippets = true
-
-[language-server.scls.environment]
-RUST_LOG = "info,simple-completion-language-server=info"
-LOG_FILE = "/tmp/completion.log"
-
-[[language]]
-name = "rust"
-language-servers = ["scls", "rust-analyzer"]
+[language-server]
+hxlsp = { command = "hx-lsp" }
+oxfmt = { command = "oxfmt", args = ["--lsp"] }
+oxlint = { command = "oxlint", args = ["--lsp"] }
 
 [[language]]
 name = "html"
-language-servers = ["scls", "vscode-html-language-server"]
+language-servers = [
+  "vscode-html-language-server",
+  { name = "hxlsp", only-features = [
+    "completion",
+  ] },
+]
 
 [[language]]
-name = "vue"
-auto-format = true
-language-servers = ["typescript-language-server"]
-
-[[language-server.typescript-language-server.config.plugins]]
-name = "@vue/typescript-plugin"
-location = "/home/daniel/.volta/tools/shared/@vue/language-server"
-languages = ["vue"]
+name = "typescript"
+language-servers = ["oxfmt", "oxlint", "typescript-language-server"]
