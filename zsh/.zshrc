@@ -13,6 +13,7 @@ bindkey -v
 autoload -Uz compinit; compinit
 
 alias c="clear"
+alias cb="wl-copy"
 alias e="exit"
 alias g="git"
 alias h="helix"
