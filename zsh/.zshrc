@@ -6,6 +6,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 EDITOR=helix
 PROMPT='%F{blue}%~: %F{reset_color}'
+LC_COLLATE=C
 
 setopt appendhistory autocd extendedglob
 bindkey -v
