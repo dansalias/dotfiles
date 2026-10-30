@@ -7,6 +7,7 @@
     ./waybar.nix
     ./zsh.nix
     ./helix.nix
+    ./wallpaper
   ];
 
   systemd.user.tmpfiles.rules = [
@@ -18,6 +19,11 @@
   home.homeDirectory = "/home/daniel";
   home.persistence."/persist" = {
     directories = [
+      # wallpaper
+      ".cache/awww"
+      ".local/state/wallpaper"
+
+      # other
       "archive"
       "blog"
       "books"

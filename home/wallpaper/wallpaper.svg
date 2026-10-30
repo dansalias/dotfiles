@@ -31,10 +31,8 @@
     }
   </style>
   <defs>
-    <filter id="dilate">
-      <feMorphology operator="dilate" radius="30"/>
-    </filter>
     <rect x="0" y="0" width="100%" height="100%" id="rect-full"/>
+
     <linearGradient id="gradient">
       <stop offset="0%" stop-color="#9c3939"/>
       <stop offset="20%" stop-color="#747d6f"/>
@@ -47,6 +45,7 @@
       <stop offset="0" stop-color="#000000"/>
       <stop offset="1" stop-color="#ffffff"/>
     </linearGradient>
+
     <mask id="fade-mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
       <rect x="0" y="0" width="1" height="1" fill="url(#fade)"/>
     </mask>
@@ -60,43 +59,23 @@
       <rect x="10" y="10" width="30" height="30"/>
     </pattern>
 
-    <path
-      id="kernel-path"
-      d="M 300,1600 a 2000 2000 0 0 0 2000,-2000"
-    />
-    <text id="kernel-text">
-      <textPath alignment-baseline="middle" text-anchor="middle" href="#kernel-path" startOffset="1000">
-        ${kernel-version}
-      </textPath>
-    </text>
-
-    <path
-      id="distro-path"
-      d="M 600,3600 a 2000 2000 0 0 1 4000,0"
-    />
-    <text id="distro-text">
-      <textPath alignment-baseline="middle" text-anchor="middle" href="#distro-path" startOffset="2900">
-        ${nixos-version}
-      </textPath>
-    </text>
-
-    <path
-      id="wm-path"
-      d="M 2600,-1000 a 2000 2000 0 0 0 2000,2000"
-    />
-    <text id="wm-text">
-      <textPath alignment-baseline="middle" text-anchor="middle" href="#wm-path" startOffset="1800">
-        ${niri-version}
-      </textPath>
-    </text>
+    <path id="kernel-path" d="M 300,1600 a 2000 2000 0 0 0 2000,-2000"/>
+    <path id="distro-path" d="M 600,3600 a 2000 2000 0 0 1 4000,0"/>
+    <path id="wm-path" d="M 2600,-1000 a 2000 2000 0 0 0 2000,2000"/>
 
     <mask id="text-mask">
       <use href="#rect-full" fill="#ffffff"/>
-      <g filter="url(#dilate)">
-        <use href="#kernel-text"/>
-        <use href="#distro-text"/>
-        <use href="#wm-text"/>
-      </g>
+      <text text-anchor="middle" stroke="black" stroke-width="60">
+        <textPath alignment-baseline="middle" href="#kernel-path" startOffset="1000">
+          ${masks[kernel]}
+        </textPath>
+        <textPath alignment-baseline="middle" href="#distro-path" startOffset="2900">
+          ${masks[distro]}
+        </textPath>
+        <textPath alignment-baseline="middle" href="#wm-path" startOffset="1800">
+          ${masks[wm]}
+        </textPath>
+      </text>
     </mask>
 
     <mask id="mask">
@@ -113,9 +92,17 @@
       </g>
 
       <g opacity="0.6">
-        <use href="#kernel-text"/>
-        <use href="#distro-text"/>
-        <use href="#wm-text"/>
+        <text text-anchor="middle">
+          <textPath alignment-baseline="middle" href="#kernel-path" startOffset="1000">
+            ${versions[kernel]}
+          </textPath>
+          <textPath alignment-baseline="middle" href="#distro-path" startOffset="2900">
+            ${versions[distro]}
+          </textPath>
+          <textPath alignment-baseline="middle" href="#wm-path" startOffset="1800">
+            ${versions[wm]}
+          </textPath>
+        </text>
       </g>
 
     </mask>

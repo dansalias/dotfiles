@@ -16,22 +16,32 @@
 
       ExecStart = let
         placeholder = pkgs.runCommand
-          "wallpaper-placeholder.png"
+          "wallpaper.placeholder.png"
           { nativeBuildInputs = with pkgs; [ resvg ]; }
           ''
             resvg --use-fonts-dir ${pkgs.hack-font}/share/fonts/truetype \
-              ${./wallpaper.svg} $out 
+              ${./wallpaper.svg} $out
           '';
         script = pkgs.writeShellApplication {
           name = "set-wallpaper";
-          runtimeInputs = with pkgs; [ resvg awww ];
+          runtimeInputs = with pkgs; [ awww resvg ];
           text = ''
             wp="$STATE_DIRECTORY/wallpaper.png"
 
-            awww img ${placeholder}
+            declare -xA versions=(
+              ['kernel']="linux $(uname -r)"
+              ['distro']="nixos $(nixos-version)"
+              ['wm']="$(niri --version)"
+            )
+
+            declare -xA masks
+
+            for i in "''${!versions[@]}"; do
+              masks[$i]=$(echo "''${versions[$i]}" | sed -r 's/./-/g')
+            done
 
             eval "cat <<EOF
-            $(sed 's/amp;//' < ${./wallpaper.svg})
+            $(cat ${./wallpaper.svg})
             EOF" | resvg --resources-dir ./ - "$wp"
 
             awww img "$wp"
