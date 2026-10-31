@@ -16,18 +16,27 @@
       font-family: 'Hack', monospace;
       font-size: 28pt;
       letter-spacing: 0.1em;
+      text-anchor: middle;
     }
 
-    .soft {
+    textPath {
+      alignment-baseline: middle;
+    }
+
+    .opacity-60 {
+      opacity: 0.6;
+    }
+
+    .opacity-70 {
       opacity: 0.7;
     }
 
-    .bright-60 {
-      filter: brightness(60%);
+    .bright-50 {
+      filter: brightness(50%);
     }
 
-    .bright-10 {
-      filter: brightness(34%);
+    .bright-30 {
+      filter: brightness(30%);
     }
   </style>
   <defs>
@@ -59,20 +68,25 @@
       <rect x="10" y="10" width="30" height="30"/>
     </pattern>
 
-    <path id="kernel-path" d="M 300,1600 a 2000 2000 0 0 0 2000,-2000"/>
+    <!-- cx = 300  cy = -400  r = 2000 -->
+    <path id="kernel-path" d="M -1700,-400 a 2000 2000 0 0 0 4000,0"/>
+
+    <!-- cx = 2600 cy = 3600  r = 2000 -->
     <path id="distro-path" d="M 600,3600 a 2000 2000 0 0 1 4000,0"/>
+
+    <!-- cx = 4600 cy = -1000 r = 2000 -->
     <path id="wm-path" d="M 2600,-1000 a 2000 2000 0 0 0 2000,2000"/>
 
     <mask id="text-mask">
       <use href="#rect-full" fill="#ffffff"/>
-      <text text-anchor="middle" stroke="black" stroke-width="60">
-        <textPath alignment-baseline="middle" href="#kernel-path" startOffset="1000">
+      <text stroke="black" stroke-width="60">
+        <textPath href="#kernel-path" startOffset="4200">
           ${masks[kernel]}
         </textPath>
-        <textPath alignment-baseline="middle" href="#distro-path" startOffset="2900">
+        <textPath href="#distro-path" startOffset="2900">
           ${masks[distro]}
         </textPath>
-        <textPath alignment-baseline="middle" href="#wm-path" startOffset="1800">
+        <textPath href="#wm-path" startOffset="1800">
           ${masks[wm]}
         </textPath>
       </text>
@@ -83,17 +97,17 @@
 
       <rect x="-1500" y="1000" width="2000" height="400" fill="url(#dots)" transform="rotate(-45)"/>
       <rect x="600" y="-1600" width="2000" height="600" fill="url(#lines)" transform="rotate(45)"/>
-      <rect x="3800" y="-3500" width="3000" height="3000" fill="url(#squares)" transform="rotate(45)" class="soft" mask="url(#fade-mask)"/>
+      <rect x="3800" y="-3500" width="3000" height="3000" fill="url(#squares)" transform="rotate(45)" class="opacity-70" mask="url(#fade-mask)"/>
 
       <g class="arcs" mask="url(#text-mask)">
-        <circle cx="300" cy="-400" r="2000"/>
-        <circle cx="2600" cy="3600" r="2000"/>
-        <circle cx="4600" cy="-1000" r="2000"/>
+        <use href="#kernel-path"/>
+        <use href="#distro-path"/>
+        <use href="#wm-path"/>
       </g>
 
-      <g opacity="0.6">
-        <text text-anchor="middle">
-          <textPath alignment-baseline="middle" href="#kernel-path" startOffset="1000">
+      <g class="opacity-60">
+        <text>
+          <textPath href="#kernel-path" startOffset="4200">
             ${versions[kernel]}
           </textPath>
           <textPath alignment-baseline="middle" href="#distro-path" startOffset="2900">
@@ -107,6 +121,6 @@
 
     </mask>
   </defs>
-  <use class="bright-60" href="#rect-full" fill="url(#gradient)"/>
-  <use class="bright-10" href="#rect-full" fill="#151a24" mask="url(#mask)"/>
+  <use class="bright-50" href="#rect-full" fill="url(#gradient)"/>
+  <use class="bright-30" href="#rect-full" fill="#151a24" mask="url(#mask)"/>
 </svg>
