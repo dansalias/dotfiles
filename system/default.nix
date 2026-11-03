@@ -36,5 +36,11 @@
     colors = theme.colors;
   };
 
+  environment.persistence."/persist" = {
+    directories = [
+      "/var/lib/nixos"
+    ];
+  };
+
   system.stateVersion = "26.05";
 }
