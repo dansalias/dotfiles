@@ -55,7 +55,7 @@
             text = ''
               set -x
 
-              git clone https://github.com/dansalias/dotfiles /tmp/dotfiles
+              git clone -b nix https://github.com/dansalias/dotfiles /tmp/dotfiles
               cd /tmp/dotfiles
 
               export NIX_CONFIG="experimental-features = nix-command flakes"
