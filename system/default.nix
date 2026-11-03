@@ -1,8 +1,8 @@
-{ config, lib, pkgs, theme, ... }:
+{ config, diskDevice, hostName, lib, pkgs, theme, ... }:
 
 {
   imports = [
-    ./hardware.nix
+    ./disk.nix
     ./boot.nix
     ./memory.nix
     ./networking.nix

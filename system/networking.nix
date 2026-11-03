@@ -1,6 +1,8 @@
+{ hostName, ... }:
+
 {
   networking = {
-    hostName = "vm";
+    inherit hostName;
     networkmanager.enable = true;
   };
 }
