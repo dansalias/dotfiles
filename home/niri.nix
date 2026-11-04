@@ -79,11 +79,11 @@
         };
         "Mod+B" = {
           _props.hotkey-overlay-title = "New Browser";
-          spawn = "chromium --show-avatar-button=never";
+          spawn = [ "chromium" "--show-avatar-button=never" ];
         };
         "Mod+Shift+B" = {
           _props.hotkey-overlay-title = "New Private Browser";
-          spawn = "chromium --show-avatar-button=never --incognito";
+          spawn = [ "chromium" "--show-avatar-button=never" "--incognito" ];
         };
       };
 
