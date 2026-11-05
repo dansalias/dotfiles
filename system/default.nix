@@ -32,6 +32,8 @@
   users.users.root.shell = pkgs.zsh;
   programs.niri.enable = true;
 
+  services.udev.packages = [ pkgs.vial ];
+
   console = {
     earlySetup = true;
     packages = with pkgs; [
