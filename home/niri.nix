@@ -68,6 +68,14 @@
         "Mod+Ctrl+S".screenshot-screen = {};
         "Mod+Shift+S".screenshot-window = {};
 
+        # controls
+        "XF86MonBrightnessDown" = {
+          spawn-sh = "~/dotfiles/scripts/backlight.sh set - 10";
+        };
+        "XF86MonBrightnessUp" = {
+          spawn-sh = "~/dotfiles/scripts/backlight.sh set + 10";
+        };
+
         # apps
         "Mod+Return" = {
           _props.hotkey-overlay-title = "New Terminal";

@@ -18,7 +18,7 @@
           "network"
           "bluetooth"
           "pulseaudio"
-          "backlight"
+          "custom/backlight"
           "battery"
         ];
         disk = {
@@ -48,8 +48,10 @@
         pulseaudio = {
           "format" = "<span color='#777'>vol:</span> {volume}%";
         };
-        backlight = {
-          "format" = "<span color='#777'>bl:</span> {percent}%";
+        "custom/backlight" = {
+          "exec" = "~/dotfiles/scripts/backlight.sh get";
+          "format" = "<span color='#777'>bl:</span> {text}";
+          "signal" = 1;
         };
         battery = {
           "format" = "<span color='#777'>bat:</span> {capacity}%";

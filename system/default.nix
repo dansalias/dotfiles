@@ -12,13 +12,17 @@
     ./users.nix
   ];
 
+  hardware.i2c.enable = true;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   time.timeZone = "Europe/Madrid";
 
   environment.systemPackages = with pkgs; [
+    brightnessctl
     git
     helix
+    jq
   ];
 
   environment.variables.EDITOR = "hx";

@@ -10,7 +10,7 @@
       daniel = {
         hashedPasswordFile = "/persist/passwords/daniel";
         isNormalUser = true;
-        extraGroups = [ "wheel" "networkmanager" ];
+        extraGroups = [ "wheel" "networkmanager" "i2c" ];
         shell = pkgs.zsh;
       };
     };
