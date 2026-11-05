@@ -98,7 +98,7 @@
       _children = [
         {
           layer-rule._children = [
-            { match._props = { namespace = "^wallpaper$"; }; }
+            { match._props = { namespace = "awww"; }; }
             { place-within-backdrop = true; }
           ];
         }
