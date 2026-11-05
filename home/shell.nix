@@ -29,4 +29,12 @@
       '';
     };
   };
+
+  programs.dircolors = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      OTHER_WRITABLE = "30;43";
+    };
+  };
 }

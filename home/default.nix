@@ -6,7 +6,7 @@
     ./github.nix
     ./niri.nix
     ./waybar.nix
-    ./zsh.nix
+    ./shell.nix
     ./helix.nix
     ./wallpaper
   ];
