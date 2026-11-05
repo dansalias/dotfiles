@@ -27,6 +27,7 @@
       "archive"
       "blog"
       "books"
+      "dotfiles"
       "inbox"
       "lab"
       "notes"
