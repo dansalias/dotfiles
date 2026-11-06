@@ -3,6 +3,7 @@
 {
   imports = [
     ./foot.nix
+    ./git.nix
     ./github.nix
     ./niri.nix
     ./waybar.nix
