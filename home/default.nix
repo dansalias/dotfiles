@@ -5,6 +5,7 @@
     ./foot.nix
     ./git.nix
     ./github.nix
+    ./gpg.nix
     ./niri.nix
     ./waybar.nix
     ./shell.nix
@@ -28,6 +29,7 @@
       # other
       ".password-store"
       ".ssh"
+      ".gnupg"
       "archive"
       "blog"
       "books"
