@@ -26,6 +26,7 @@
       ".local/state/wallpaper"
 
       # other
+      ".ssh"
       "archive"
       "blog"
       "books"
