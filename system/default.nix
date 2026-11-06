@@ -23,6 +23,7 @@
     git
     helix
     jq
+    wl-clipboard
   ];
 
   environment.variables.EDITOR = "hx";
