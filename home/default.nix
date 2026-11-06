@@ -26,6 +26,7 @@
       ".local/state/wallpaper"
 
       # other
+      ".password-store"
       ".ssh"
       "archive"
       "blog"
