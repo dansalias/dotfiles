@@ -3,6 +3,7 @@
     enable = true;
     lfs.enable = true;
     settings = {
+      diff.algorithm = "histogram";
       init.defaultBranch = "trunk";
       pull.rebase = true;
       url."ssh://git@github.com".insteadOf = "https://github.com";
